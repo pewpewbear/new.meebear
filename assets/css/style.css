@@ -611,6 +611,44 @@ figure {
   -ms-transform: translateY(0);
   transform: translateY(0); }
 
+/* Make marquee responsive */
+.marq-action .main-marq {
+  overflow: hidden;
+  width: 100vw; /* Fit the width of the phone */
+  height: 100px; /* Adjust the height as needed */
+}
+
+.slide-har {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap; /* Prevent items from wrapping */
+}
+
+/* Adjust the items inside the marquee */
+.marq-action .item {
+  display: inline-block;
+  margin-right: 20px; /* Space between items */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .marq-action .main-marq {
+      height: 80px; /* Reduce height for smaller screens */
+  }
+  
+  .marq-action .item h4 {
+      font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .marq-action .icon img {
+      width: 16px; /* Adjust icon size */
+      height: 16px;
+  }
+}
+
+
+
 .main-marq {
   position: relative;
   padding: 0; }
@@ -2262,8 +2300,11 @@ body.loaded {
   background: transparent;
   border-bottom: 2px solid transparent;
   z-index: 999; }
-  .navbar.static {
-    position: relative !important; }
+
+.navbar .container-xl {
+    padding-top: 20px; 
+    padding-bottom: 20px;}
+
     .navbar.static.nav-scroll {
       top: auto !important;
       -webkit-transform: translateY(0) !important;
@@ -3456,6 +3497,14 @@ footer.sm-footer .social-text a {
     top: -10vw;
     left: -10vw;
     z-index: -1; }
+
+/* Different padding for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .header-creative {
+    padding: 180px 0 0px; /* Adjust the top and bottom padding for mobile */
+  }
+}
+
   .header-creative .caption h1 {
     font-size: 110px;
     line-height: 1.2;
@@ -3517,6 +3566,8 @@ footer.sm-footer .social-text a {
         text-decoration: underline;
         -webkit-text-decoration-color: #888;
         text-decoration-color: #888; }
+
+      .text p {font-size: 14px;}
 
 .digital-marketing {
   padding: 180px 0 0;
@@ -6035,7 +6086,7 @@ footer.sm-footer .social-text a {
   header .contact-email {
     display: none; }
   .header-creative .caption h1 {
-    font-size: 70px; }
+    font-size: 60px; }
     .header-creative .caption h1 .icon {
       padding-left: 60px; }
       .header-creative .caption h1 .icon img {
